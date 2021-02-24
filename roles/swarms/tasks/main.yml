@@ -1,0 +1,12 @@
+---
+
+- name: Initialise the swarm
+  docker_swarm:
+  state: present
+
+- name: Get join token from Swarm manager
+  docker_swarm_info: join_token
+  ignore_errors: yes
+  register: mtoken
+
+# tasks file for swarms

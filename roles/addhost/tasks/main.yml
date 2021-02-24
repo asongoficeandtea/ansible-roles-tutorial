@@ -1,0 +1,10 @@
+---
+
+- name: Join hosts to swarm
+  docker_swarm:
+  state: join
+  advertise_addr: 10.138.0.51
+                  10.138.0.50
+  join_token:
+
+# tasks file for addhost
